@@ -21,18 +21,18 @@ let package = Package(
         .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "5.0.2"),
         .package(url: "https://github.com/TimOliver/TOCropViewController.git", from: "3.2.0"),
         .package(url: "https://github.com/Yummypets/YPImagePicker.git", from: "5.4.0"),
-        .package(url: "https://github.com/ninjaprox/NVActivityIndicatorView.git", from: "5.2.1")
+        .package(url: "https://github.com/ninjaprox/NVActivityIndicatorView.git", from: "5.0.0")
     ],
     targets: [
         .binaryTarget(
             name: "MintFrameworksBinary",
             url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.0/MintFrameworks.xcframework.zip",
-            checksum: "215cdea1fbe130555100d52133c23a3a09e9b7b9b728a626d0a51fc2b6614284"
+            checksum: "2c84ba9033d60917abea6a120b4d3f21ea7e5f3564e5ad8f3b9be6706b64b4e3"
         ),
         .binaryTarget(
             name: "VoltFrameworkBinary",
             url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.0/VoltFramework.xcframework.zip",
-            checksum: "b096ac75e08c6443a267f35351c35945efdb1d39543d9e461491a7a24be22ba5"
+            checksum: "c781116a6ca4d497fdae00881539c4e4a8ac45c59bb36b953dd1bcd7b1c970ff"
         ),
         .target(
             name: "MintFrameworksWrapper",
