@@ -3,9 +3,14 @@ import PackageDescription
 
 let package = Package(
     name: "MintFrameworks",
-    platforms: [.iOS(.v16)],
+    platforms: [
+        .iOS(.v16)
+    ],
     products: [
-        .library(name: "MintFrameworks", targets: ["MintFrameworks"])
+        .library(
+            name: "MintFrameworks",
+            targets: ["MintFrameworksWrapper"]
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/danielgindi/Charts.git", from: "5.1.0"),
@@ -22,22 +27,18 @@ let package = Package(
         .binaryTarget(
             name: "MintFrameworksBinary",
             url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.0/MintFrameworks.xcframework.zip",
-            checksum: "c382de55f6b7a2b309751103a2bc0069aa6d09b06b9cda021c12cbcb9a479f8a"
+            checksum: "215cdea1fbe130555100d52133c23a3a09e9b7b9b728a626d0a51fc2b6614284"
         ),
         .binaryTarget(
             name: "VoltFrameworkBinary",
             url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.0/VoltFramework.xcframework.zip",
-            checksum: "999dcaff0fb2a91e9272ecaecf5a4a523f91ff3d931813f313c6a8b7ff62b799"
+            checksum: "b096ac75e08c6443a267f35351c35945efdb1d39543d9e461491a7a24be22ba5"
         ),
         .target(
-            name: "VoltFramework",
-            dependencies: [.target(name: "VoltFrameworkBinary")]
-        ),
-        .target(
-            name: "MintFrameworks",
+            name: "MintFrameworksWrapper",
             dependencies: [
                 .target(name: "MintFrameworksBinary"),
-                .target(name: "VoltFramework"),
+                .target(name: "VoltFrameworkBinary"),
                 .product(name: "DGCharts", package: "Charts"),
                 .product(name: "IQKeyboardManagerSwift", package: "IQKeyboardManager"),
                 .product(name: "Lottie", package: "lottie-ios"),
@@ -47,7 +48,8 @@ let package = Package(
                 .product(name: "TOCropViewController", package: "TOCropViewController"),
                 .product(name: "YPImagePicker", package: "YPImagePicker"),
                 .product(name: "NVActivityIndicatorView", package: "NVActivityIndicatorView")
-            ]
+            ],
+            path: "Sources/MintFrameworksWrapper"
         )
     ]
 )
