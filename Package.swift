@@ -2,11 +2,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "MintFrameworks",
+    name: "MintSDK",
     platforms: [
         .iOS(.v16)
     ],
     products: [
+        .library(
+            name: "MintSDK",
+            targets: ["MintFrameworksWrapper"]
+        ),
         .library(
             name: "MintFrameworks",
             targets: ["MintFrameworksWrapper"]
@@ -26,13 +30,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "MintFrameworksBinary",
-            url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.0/MintFrameworks.xcframework.zip",
-            checksum: "2c84ba9033d60917abea6a120b4d3f21ea7e5f3564e5ad8f3b9be6706b64b4e3"
+            url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.1/MintFrameworks.xcframework.zip",
+            checksum: "c18996eb905871b0e7e8b9f6b69877dfece1dcf4227c52eff4e28a841178d6cd"
         ),
         .binaryTarget(
             name: "VoltFrameworkBinary",
-            url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.0/VoltFramework.xcframework.zip",
-            checksum: "c781116a6ca4d497fdae00881539c4e4a8ac45c59bb36b953dd1bcd7b1c970ff"
+            url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.1/VoltFramework.xcframework.zip",
+            checksum: "ed425242be1dd42e5a616a688dce0f22be42107e1dfd9af6931190b0204d85af"
         ),
         .target(
             name: "MintFrameworksWrapper",
