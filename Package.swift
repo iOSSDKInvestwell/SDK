@@ -30,12 +30,12 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "MintFrameworksBinary",
-            url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.1/MintFrameworks.xcframework.zip",
+            url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.2/MintFrameworks.xcframework.zip",
             checksum: "31b3eb034091e657f070bfd4fdfa06ae4bd59974e69ad0eb73679f0f5755d07e"
         ),
         .binaryTarget(
             name: "VoltFrameworkBinary",
-            url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.1/VoltFramework.xcframework.zip",
+            url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.2/VoltFramework.xcframework.zip",
             checksum: "144718d54916748f7d6b2b49fdaccb340937b306bd0f3014f21282b7d893a561"
         ),
         .target(
