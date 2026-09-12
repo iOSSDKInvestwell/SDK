@@ -30,13 +30,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "MintFrameworksBinary",
-            url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.4/MintFrameworks.xcframework.zip",
-            checksum: "a78145254e9ddbb6d5fcf1564a5348140d8b6a290221be3236af0c062a2a377b"
+            url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.5/MintFrameworks.xcframework.zip",
+            checksum: "9dcf3c5338a53e4d68fb2df642c10b67d60b7fcf345d7887885181bc5e88cc4b"
         ),
         .binaryTarget(
             name: "VoltFrameworkBinary",
-            url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.4/VoltFramework.xcframework.zip",
-            checksum: "7aab84d4e6a7ffab86df01103537c2ad1e4628e843768c0654ce4f587c726f30"
+            url: "https://github.com/iOSSDKInvestwell/SDK/releases/download/1.0.5/VoltFramework.xcframework.zip",
+            checksum: "af847bd82c29c4fd445a8b26e438677248a0000853b958c7d838201a20826b28"
         ),
         .target(
             name: "MintFrameworksWrapper",
@@ -50,6 +50,7 @@ let package = Package(
                 .product(name: "SideMenu", package: "SideMenu"),
                 .product(name: "SwiftyJSON", package: "SwiftyJSON"),
                 .product(name: "TOCropViewController", package: "TOCropViewController"),
+                .product(name: "CropViewController", package: "TOCropViewController"),
                 .product(name: "YPImagePicker", package: "YPImagePicker"),
                 .product(name: "NVActivityIndicatorView", package: "NVActivityIndicatorView")
             ],
